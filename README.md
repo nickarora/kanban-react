@@ -1,0 +1,1 @@
+A small Kanban application written using React.js and built using a Webpack based configuration.
