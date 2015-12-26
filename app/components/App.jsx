@@ -22,7 +22,7 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <Notes item={notes} />
+        <Notes items={notes} />
       </div>
     );
   }
