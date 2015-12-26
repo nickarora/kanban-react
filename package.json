@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/nickarora/kanban-react/issues"
   },
-  "homepage": "https://github.com/nickarora/kanban-react#readme"
+  "homepage": "https://github.com/nickarora/kanban-react#readme",
+  "devDependencies": {
+    "webpack": "^1.12.9"
+  }
 }
