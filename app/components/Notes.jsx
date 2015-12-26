@@ -1,6 +1,6 @@
 import React from 'react';
 import uuid from 'node-uuid';
-import Notes from './Notes';
+import Note from './Note';
 
 const notes = [
   {
@@ -18,13 +18,19 @@ const notes = [
 ];
 
 export default class App extends React.Component {
-
   render() {
     return (
       <div>
-        <Notes item={notes} />
+        <ul>{notes.map(this.renderNote)}</ul>
       </div>
     );
   }
 
+  renderNote(note) {
+    return (
+      <li key={note.id}>
+        <Note task={note.task} />
+      </li>
+    );
+  }
 }
