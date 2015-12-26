@@ -1,12 +1,10 @@
 {
   "name": "kanban-react",
   "version": "1.0.0",
-
-
   "description": "A small Kanban application written using React.js and built using a Webpack based configuration.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -19,14 +17,10 @@
   },
   "homepage": "https://github.com/nickarora/kanban-react#readme",
   "devDependencies": {
+    "css-loader": "^0.23.1",
     "html-webpack-plugin": "^1.7.0",
+    "style-loader": "^0.13.0",
     "webpack": "^1.12.9",
     "webpack-dev-server": "^1.14.0"
-  },
-
-
-  "scripts": {
-    "start": "webpack-dev-server"
   }
-
 }
