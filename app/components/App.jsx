@@ -30,9 +30,19 @@ export default class App extends React.Component {
 
     return (
       <div>
+        <button className="add-note" onClick={this.addNote}>+</button>
         <Notes items={notes} />
       </div>
     );
+  }
+
+  addNote = () => {
+    this.setState({
+      notes: this.state.notes.concat([{
+        id: uuid.v4(), // normally comes from a query of db
+        task: 'New Task'
+      }])
+    });
   }
 
 }
