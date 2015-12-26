@@ -9,6 +9,8 @@ const PATHS = {
   build : path.join(__dirname, 'build')
 }
 
+process.env.BABEL_ENV = TARGET;
+
 var common = {
   entry: PATHS.app,
 
@@ -59,7 +61,6 @@ if (TARGET === 'start' || !TARGET) {
       hot: true,
       inline: true,
       progress: true,
-      quiet: true,
 
       // Display only errors to reduce the amount of output.
       stats: 'errors-only',
