@@ -1,0 +1,19 @@
+{
+  "name": "kanban-react",
+  "version": "1.0.0",
+  "description": "A small Kanban application written using React.js and built using a Webpack based configuration.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nickarora/kanban-react.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nickarora/kanban-react/issues"
+  },
+  "homepage": "https://github.com/nickarora/kanban-react#readme"
+}
