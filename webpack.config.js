@@ -20,6 +20,11 @@ var common = {
   //   filename: 'bundle.js'
   // },
 
+  // import jsx files without an extension!
+  resolve: {
+    extensions: ['', '.js', '.jsx']
+  },
+
   module: {
     loaders: [
       {
@@ -27,6 +32,11 @@ var common = {
         test: /\.css$/,
         loaders: ['style', 'css'],
         // Include accepts either a path or an array of paths
+        include: PATHS.app
+      },
+      {
+        test: /\.jsx?$/,
+        loaders: ['babel'],
         include: PATHS.app
       }
     ]
