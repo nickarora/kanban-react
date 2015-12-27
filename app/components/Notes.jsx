@@ -3,7 +3,7 @@ import Note from './Note';
 
 export default class Notes extends React.Component {
   render() {
-    const notes = this.props.items;
+    const notes = this.props.notes;
 
     return <ul className="notes">{notes.map(this.renderNote)}</ul>;
   }
