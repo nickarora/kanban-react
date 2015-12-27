@@ -8,10 +8,13 @@ export default class Notes extends React.Component {
     return <ul>{notes.map(this.renderNote)}</ul>;
   }
 
-  renderNote(note) {
+  // note onEdit's second argument is bound to note.id
+  renderNote = (note) => {
     return (
       <li key={note.id}>
-        <Note task={note.task} />
+        <Note
+          task={note.task}
+          onEdit={this.props.onEdit.bind(null, note.id)} />
       </li>
     );
   }
