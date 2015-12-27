@@ -19,7 +19,7 @@ class LaneStore {
     });
   }
 
-  attachToLane(laneId, noteId) {
+  attachToLane({laneId, noteId}) {
     if (!noteId) {
       this.waitFor(NoteStore); // useful if working with a async db
       noteId = NoteStore.getState().notes.slice(-1)[0].id; //last note
@@ -35,6 +35,17 @@ class LaneStore {
         }
       }
 
+      return lane;
+    });
+
+    this.setState({lanes});
+  }
+
+  detachFromLane({laneId, noteId}) {
+    const lanes = this.lanes.map((lane) => {
+      if (lane.id === laneId) {
+        lane.notes = lane.notes.filter((note) => note !== noteId)
+      }
       return lane;
     });
 
