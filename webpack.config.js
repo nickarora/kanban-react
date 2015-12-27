@@ -14,13 +14,10 @@ process.env.BABEL_ENV = TARGET;
 var common = {
   entry: PATHS.app,
 
-  // dev server runs in memory
-  // therefore temporarily drop output
-
-  // output: {
-  //   path: PATHS.build,
-  //   filename: 'bundle.js'
-  // },
+  output: {
+    path: PATHS.build,
+    filename: 'bundle.js'
+  },
 
   // import jsx files without an extension!
   resolve: {
