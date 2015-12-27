@@ -5,7 +5,7 @@ export default class Notes extends React.Component {
   render() {
     const notes = this.props.items;
 
-    return <ul>{notes.map(this.renderNote)}</ul>;
+    return <ul className="notes">{notes.map(this.renderNote)}</ul>;
   }
 
   // note onEdit's first argument is bound to note.id
