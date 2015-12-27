@@ -22,23 +22,8 @@ export default class App extends React.Component {
     );
   }
 
-
   addItem() {
     LaneActions.create({name: 'New Lane'});
   }
-
-  // <Notes onEdit={this.editNote} onDelete={this.deleteNote} />
-
-  // addNote() {
-  //   NoteActions.create({task: 'New task'});
-  // }
-
-  // editNote(id, task) {
-  //   NoteActions.update({id, task});
-  // }
-
-  // deleteNote(id) {
-  //   NoteActions.delete(id);
-  // }
 
 }
