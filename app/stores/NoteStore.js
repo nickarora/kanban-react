@@ -7,6 +7,18 @@ class NoteStore {
     //map each action to a method by name
     this.bindActions(NoteActions);
     this.notes = [];
+
+    // provided by Alt --> exposes public methods
+    this.exportPublicMethods({
+      get: this.get.bind(this)
+    });
+  }
+
+  // accepts array of note ids and returns note objects
+  get(ids) {
+    return (ids || []).map(
+      (id) => this.notes.filter((note) => note.id === id)
+    ).filter((a) => a).map((a) => a[0]);
   }
 
   create(note) {
