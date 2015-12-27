@@ -13,7 +13,7 @@ class NoteStore {
 
     const notes = this.notes;
     note.id = uuid.v4();
-    this.setState({
+    this.setState({ // courtesy of alt
       notes: notes.concat(note)
     });
 
