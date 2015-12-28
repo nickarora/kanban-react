@@ -24,7 +24,7 @@ export default class Lane extends React.Component {
         <div className="lane-header">
           <div className="lane-name">{lane.name}</div>
           <div className="lane-add-note">
-            <button onClick={this.addNote}>+</button>
+            <button onClick={this.addNote.bind(this, id)}>+</button>
           </div>
         </div>
         <AltContainer
@@ -34,7 +34,7 @@ export default class Lane extends React.Component {
           }}>
             <Notes
               onEdit={this.editNote}
-              onDelete={this.deleteNote} />
+              onDelete={this.deleteNote.bind(this, id)} />
         </AltContainer>
       </div>
     );
