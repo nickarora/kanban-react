@@ -1,5 +1,5 @@
 import React from 'react';
-import Note from './Note';
+import Note from './Editable';
 
 export default class Notes extends React.Component {
   render() {
@@ -11,9 +11,9 @@ export default class Notes extends React.Component {
   // note onEdit's first argument is bound to note.id
   renderNote = (note) => {
     return (
-      <li key={note.id}>
-        <Note className="note"
-          task={note.task}
+      <li className="note" key={note.id}>
+        <Editable
+          value={note.task}
           onEdit={this.props.onEdit.bind(null, note.id)}
           onDelete={this.props.onDelete.bind(null, note.id)} />
       </li>
