@@ -1,6 +1,6 @@
 A small Kanban application written using ReactJs, Flux Architecture (Alt), ES6, and built using a Webpack based configuration.  Features drag and drop list items.
 
-![Screenshot](/assets/screenshot.png?raw=true =500x)
+![Screenshot](/assets/screenshot.png?raw=true  width="500")
 
 
 # About Kanban
