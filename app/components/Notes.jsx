@@ -1,5 +1,5 @@
 import React from 'react';
-import Note from './Editable';
+import Editable from './Editable';
 
 export default class Notes extends React.Component {
   render() {
