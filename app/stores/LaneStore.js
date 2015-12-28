@@ -19,6 +19,10 @@ class LaneStore {
     });
   }
 
+  move({sourceId, targetId}) {
+    console.log('source', sourceId, 'target', targetId);
+  }
+
   attachToLane({laneId, noteId}) {
     if (!noteId) {
       this.waitFor(NoteStore); // useful if working with a async db
