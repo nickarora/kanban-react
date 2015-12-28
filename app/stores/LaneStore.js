@@ -59,6 +59,8 @@ class LaneStore {
       noteId = NoteStore.getState().notes.slice(-1)[0].id; //last note
     }
 
+    this.removeNote(noteId);
+
     const lanes = this.lanes.map((lane) => {
       if (lane.id === laneId) {
         // if note isn't in the lane
@@ -73,6 +75,22 @@ class LaneStore {
     });
 
     this.setState({lanes});
+  }
+
+  removeNote(noteId) {
+    const lanes = this.lanes;
+
+    const removeLane = lanes.filter((lane) => {
+      return lane.notes.indexOf(noteId) >= 0;
+    })[0];
+
+    if (!removeLane) {
+      return;
+    }
+
+    const removeNoteIndex = removeLane.notes.indexOf(noteId);
+    removeLane.notes = removeLane.notes.slice(0, removeNoteIndex)
+      .concat(removeLane.notes.slice(removeNoteIndex + 1));
   }
 
   detachFromLane({laneId, noteId}) {

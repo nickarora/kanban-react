@@ -15,6 +15,10 @@ body {
   vertical-align: top;
 }
 
+.lane input {
+  max-width: 8em;
+}
+
 .lane-header {
   overflow: auto;
   padding: 1em;
@@ -55,6 +59,10 @@ body {
   padding: 0.5em;
   background-color: #fdfdfd;
   box-shadow: 0 0 0.03em 0.03em rgba(0, 0, 0, 0.3);
+}
+
+.note input {
+  max-width: 10em;
 }
 
 .note:hover {
